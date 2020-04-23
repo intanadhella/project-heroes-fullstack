@@ -1,0 +1,16 @@
+{
+  "name": "project-heroes-fullstack",
+  "version": "1.0.0",
+  "description": "heroes fullstack using reactjs and expressjs",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run start",
+    "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Intan Adela",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
