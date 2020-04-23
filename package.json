@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "heroes fullstack using reactjs and expressjs",
   "scripts": {
-    "backend": "cd backend && set MONGOURI=mongodb://localhost/heroes && npm run dev",
-    "frontend": "cd frontend && set REACT_APP_APIURL = http://localhost:8000 && npm run start",
+    "backend": "npm run dev --prefix ./backend",
+    "frontend": "npm run start --prefix ./frontend",
     "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
