@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "heroes fullstack using reactjs and expressjs",
   "scripts": {
-    "backend": "npm run dev --prefix ./backend",
-    "frontend": "npm run start --prefix ./frontend",
+    "backend": "cross-env MONGOURI=mongodb://localhost/heroes npm run dev --prefix ./backend",
+    "frontend": "cross-env REACT_APP_APIURL=http://localhost:8000 npm run start --prefix ./frontend",
     "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Intan Adela",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2"
   }
 }
